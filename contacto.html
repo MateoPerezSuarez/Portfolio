@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio • Contacto</title>
+  <link rel="stylesheet" href="stiles/estilos.css">
+</head>
+<body>
+  <header>
+    <img src="pics/logonegro.png" alt="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobremi.html">About me</a></li>
+        <li><a href="proyectos.html">Work</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <h2>Contacto</h2>
+      <form action="#" method="post">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="asunto">Asunto</label>
+        <select id="asunto" name="asunto" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="colaboracion">Colaboración / Proyecto</option>
+          <option value="consulta">Consulta general</option>
+          <option value="soporte">Soporte técnico</option>
+          <option value="oportunidad">Oportunidad laboral</option>
+          <option value="otros">Otros</option>
+        </select>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Mateo Pérez | Contacto: mateo.perez.suarez@opendeusto.es , +34 654168995</p>
+    <p><a href="https://github.com/MateoPerezSuarez">GitHub</a> |
+         <a href="https://www.linkedin.com/in/mateo-p%C3%A9rez-suarez-8a9264246/">LinkedIn</a></p>
+  </footer>
+</body>
+</html>
+
