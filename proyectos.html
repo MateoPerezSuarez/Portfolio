@@ -60,15 +60,14 @@
 
       <section id="anomaly" class="section">
         <h3>Anomaly Detection in Time Series</h3>
-        <p><a href="pics/anomaly.pdf">Este proyecto</a> tuvo como objetivo identificar anomalías en series temporales de precios bursátiles, tomando como referencia datos históricos de empresas tecnológicas (Apple, Tesla, Nvidia, Google, Microsoft y Salesforce) extraídos de Yahoo Finance. El reto principal era detectar comportamientos atípicos en el mercado sin disponer de etiquetas previas, por lo que optamos por un enfoque basado en modelos de reconstrucción.<br>
-          Se aplicó un preprocesamiento exhaustivo: normalización de variables financieras (open, close, high, low, volumen), construcción de secuencias de 30 días con enfoque multivariante y preparación de tensores listos para entrenamiento en redes neuronales.
-          A nivel de modelado, se implementaron diferentes arquitecturas de deep learning para comparar su desempeño:</p>
+        <p><a href="pics/anomaly.pdf">Este proyecto</a> tuvo como objetivo identificar anomalías en series temporales de precios bursátiles, tomando como referencia datos históricos de empresas tecnológicas (Apple, Tesla, Nvidia, Google, Microsoft y Salesforce) extraídos de Yahoo Finance. El reto principal era detectar comportamientos atípicos en el mercado sin disponer de etiquetas previas, por lo que optamos por un enfoque basado en modelos de reconstrucción.</p>
+        <p>Se aplicó un preprocesamiento exhaustivo: normalización de variables financieras (open, close, high, low, volumen), construcción de secuencias de 30 días con enfoque multivariante y preparación de tensores listos para entrenamiento en redes neuronales. A nivel de modelado, se implementaron diferentes arquitecturas de deep learning para comparar su desempeño:</p>
           <ul>
-            <li>Autoencoder, capaz de capturar dependencias temporales y reconstruir series con alta precisión.</li>
-            <li>Autoencoder, con un enfoque más ligero y eficiente, que mostró buena generalización incluso en datos no vistos.</li>
-            <li>Transformers Autoencoder, explorado para capturar patrones de largo alcance, aunque presentó limitaciones en la detección de anomalías locales.</li>
-            <li>La estrategia consistió en entrenar los modelos para reconstruir las series y marcar como anomalías aquellos puntos cuyo error de reconstrucción superaba un umbral definido. Los resultados más sólidos provinieron de los modelos LSTM y GRU, que lograron detectar anomalías en periodos de alta volatilidad como la crisis del COVID-19, la guerra de Ucrania o episodios de inflación global.</li>
-            <li>En conclusión, este proyecto demostró el potencial de los autoencoders recurrentes para la detección de anomalías en datos financieros, ofreciendo una herramienta valiosa para el análisis de riesgos y la toma de decisiones en entornos de alta incertidumbre.</li>
+            <li><strong>Autoencoder</strong>, capaz de <strong>capturar dependencias temporales</strong> y reconstruir series con alta precisión.</li>
+            <li>Autoencoder, con un <strong>enfoque más ligero y eficiente</strong>, que mostró buena generalización incluso en datos no vistos.</li>
+            <li><strong>Transformers Autoencoder</strong>, explorado para capturar patrones de largo alcance, aunque presentó limitaciones en la detección de anomalías locales.</li>
+            <li>La estrategia consistió en entrenar los modelos para <strong>reconstruir las series</strong> y marcar como anomalías aquellos puntos cuyo error de reconstrucción superaba un umbral definido. Los resultados más sólidos provinieron de los modelos LSTM y GRU, que lograron detectar anomalías en periodos de alta volatilidad como la crisis del COVID-19, la guerra de Ucrania o episodios de inflación global.</li>
+            <li>En conclusión, este proyecto <strong>demostró el potencial de los autoencoders recurrentes para la detección de anomalías</strong> en datos financieros, ofreciendo una herramienta valiosa para el análisis de riesgos y la toma de decisiones en entornos de alta incertidumbre.</li>
           </ul>
           <img src="pics/gru.png" alt="gruModel">
           <img src="pics/ltsm.png" alt="ltsmModel">
@@ -77,11 +76,16 @@
       <section id="fintracker" class="section">
         <h3>FinTracker</h3>
         <p>
-          Este proyecto tiene como objetivo desarrollar un prototipo de detección automática de eventos financieros relevantes a partir de noticias y comunicados corporativos. Para acotar el alcance, nos centraremos en un conjunto reducido de tipos de eventos de alto impacto: fusiones y adquisiciones, cambios en la directiva (ej. nombramiento o dimisión de CEO/CFO) y anuncios de resultados financieros.<br>
-          El sistema propuesto combinará varias técnicas de procesamiento de lenguaje natural (PLN). En primer lugar, se aplicará un clasificador de documentos para identificar si un texto contiene alguno de los eventos de interés. Posteriormente, se realizará extracción de entidades con el fin de reconocer y vincular las partes involucradas (empresas, directivos, montos, periodos temporales). A partir de esta información, se estructurará el evento en una representación clara (tipo de evento, entidades y roles). Además, se explorará la generación de un título o resumen breve en una sola frase, que sintetice la noticia de manera comprensible y directa.<br>
-          Como fuentes de datos, se emplearán noticias financieras accesibles públicamente (p. ej., NewsAPI, GDELT) y reportes oficiales como los formularios 8-K de la SEC, que proporcionan ejemplos fiables de eventos corporativos.<br>
-          La evaluación del sistema se llevará a cabo mediante métricas estándar como precisión, exhaustividad y F1-score, tanto en la detección de eventos como en la extracción de entidades. También se revisará manualmente la calidad de los títulos generados para asegurar su utilidad práctica.<br>
-          Con este enfoque limitado pero concreto, el proyecto busca construir un prototipo factible y evaluable dentro del semestre, que demuestre la aplicabilidad del PLN en la extracción de información financiera estructurada.<br>
+          Este proyecto tiene como objetivo desarrollar un prototipo de detección automática de eventos financieros relevantes a partir de noticias y comunicados corporativos. Para acotar el alcance, nos centraremos en un conjunto reducido de tipos de eventos de alto impacto: fusiones y adquisiciones, cambios en la directiva (ej. nombramiento o dimisión de CEO/CFO) y anuncios de resultados financieros.
+        </p>
+        <p>
+          El sistema propuesto combinará varias técnicas de procesamiento de lenguaje natural (PLN). En primer lugar, se aplicará un clasificador de documentos para identificar si un texto contiene alguno de los eventos de interés. Posteriormente, se realizará extracción de entidades con el fin de reconocer y vincular las partes involucradas (empresas, directivos, montos, periodos temporales). A partir de esta información, se estructurará el evento en una representación clara (tipo de evento, entidades y roles). Además, se explorará la generación de un título o resumen breve en una sola frase, que sintetice la noticia de manera comprensible y directa.
+        </p>
+        <p>
+          Como fuentes de datos, se emplearán noticias financieras accesibles públicamente (p. ej., NewsAPI, GDELT) y reportes oficiales como los formularios 8-K de la SEC, que proporcionan ejemplos fiables de eventos corporativos.
+        </p>
+        <p>
+          La evaluación del sistema se llevará a cabo mediante métricas estándar como precisión, exhaustividad y F1-score, tanto en la detección de eventos como en la extracción de entidades. También se revisará manualmente la calidad de los títulos generados para asegurar su utilidad práctica. Con este enfoque limitado pero concreto, el proyecto busca construir un prototipo factible y evaluable dentro del semestre, que demuestre la aplicabilidad del PLN en la extracción de información financiera estructurada.
         </p>
         <img src="pics/output3.png" alt="Dashboard de métricas">
       </section>
