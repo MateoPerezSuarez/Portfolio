@@ -6,47 +6,30 @@
   <title>Portfolio • Inicio</title>
   <link rel="stylesheet" href="stiles/estilos.css">
   <meta name="description" content="Portfolio de Mateo Pérez: datos, ingeniería y proyectos.">
-  <link rel="preload" href="pics/logonegro.png" as="image">
-  <link rel="preload" href="pics/negro.png" as="image">
+  <link rel="preload" href="pics/logo.png" as="image">
+  <link rel="preload" href="pics/mifoto.jpg" as="image">
 </head>
-<body>
-  <header>
-    <img src="pics/logonegro.png" alt="logo">
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="sobremi.html">About me</a></li>
-        <li><a href="proyectos.html">Work</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+<body class="landing">
   <main>
-    <div class="container">
-      <section class="inicioPerfil">
-        <img src="pics/mifoto.jpg" alt="Foto de perfil">
-        <p>
-          Hola, soy Mateo Pérez, futuro Científico de Datos e Ingeniero Informático. Me apasiona transformar información en conocimiento a través del análisis de datos, la programación y el aprendizaje automático.
-        </p>
-      </section>
-      <section class="fraseRelleno">
-        <blockquote>
-          <p>"De la información al conocimiento, del conocimiento a la acción."</p>
-        </blockquote>
-      </section>
-      <section class="inicioPerfil">
-        <img src="pics/maons.jpg" alt="Foto de perfil 2">
-        <p>
-          En este portfolio podrás conocer más sobre mí, mi formación académica, algunos proyectos que he desarrollado y cómo ponerte en contacto conmigo. Mi objetivo es aplicar la ciencia de datos para resolver problemas reales y crear soluciones innovadoras que generen impacto.
-        </p>
-      </section>
-    </div>
+    <section class="landing-hero">
+      <img class="landing-logo" src="pics/logo.png" alt="logo">
+      <img class="landing-photo" src="pics/mifoto.jpg" alt="Foto de perfil">
+      <div class="landing-buttons">
+        <div class="landing-group">
+          <a class="btn btn-primary" href="sobremi.html">About me</a>
+          <a class="btn btn-primary" href="proyectos.html">Work</a>
+          <a class="btn btn-primary" href="contacto.html">Contacto</a>
+        </div>
+        <div class="landing-group">
+          <a class="btn" href="https://github.com/MateoPerezSuarez" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/mateo-p%C3%A9rez-suarez-8a9264246/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="mailto:mateo.perez.suarez@opendeusto.es">Email</a>
+        </div>
+      </div>
+    </section>
+
+
   </main>
-  <footer>
-    <p>&copy; 2025 Mateo Pérez | Contacto: mateo.perez.suarez@opendeusto.es , +34 654168995</p>
-    <p><a href="https://github.com/MateoPerezSuarez">GitHub</a> |
-         <a href="https://www.linkedin.com/in/mateo-p%C3%A9rez-suarez-8a9264246/">LinkedIn</a></p>
-  </footer>
 </body>
 </html>
 

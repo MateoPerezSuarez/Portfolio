@@ -8,8 +8,8 @@
 </head>
 <body>
   <header>
-    <img src="pics/logonegro.png" alt="logo">
-    <nav>
+    <img src="pics/logo.png" alt="logo">
+    <nav aria-label="Primary">
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="sobremi.html">About me</a></li>
@@ -21,6 +21,8 @@
   <main>
     <div class="container">
       <h2>Proyectos</h2>
+      <div class="layout-with-aside">
+        <section class="content">
       <div class="grid">
         <a class="proyectosClicables" href="#bankChurn">
           <img src="pics/churn.jpg" alt="Proyecto 1">
@@ -41,17 +43,96 @@
 
       <section id="bankChurn" class="section">
         <h3>Bank Churn Prediction</h3>
-        <p><a href="pics/BankChurn.pdf">Este proyecto</a> consistió en el desarrollo de un modelo predictivo para anticipar cuándo un cliente de un banco es más propenso a abandonar la entidad. Partimos de un dataset con 10.000 registros que incluía información demográfica, financiera y de comportamiento de los clientes (edad, crédito, balance, productos contratados, etc.).</p>
-          <img src="pics/img1.png" alt="previo1">
+        <p><a href="pics/BankChurn.pdf">Este proyecto</a> consistió en el desarrollo de un modelo predictivo para anticipar cuándo un cliente de un banco es más propenso a abandonar la entidad. Partimos de un <a href="https://www.kaggle.com/datasets/ameenhasan/bank-churn-customer-prediction-dataset">dataset</a> con 10.000 registros que incluía información demográfica, financiera y de comportamiento de los clientes (edad, crédito, balance, productos contratados, etc.).</p>
+          <div class="tableWrapper">
+          <table class="dataTable">
+            <thead>
+              <tr>
+                <th>RowNumber</th>
+                <th>CustomerId</th>
+                <th>Surname</th>
+                <th>CreditScore</th>
+                <th>Geography</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Tenure</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>15634602</td>
+                <td>Hargrave</td>
+                <td>619</td>
+                <td>France</td>
+                <td>Female</td>
+                <td>42</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>15647311</td>
+                <td>Hill</td>
+                <td>608</td>
+                <td>Spain</td>
+                <td>Female</td>
+                <td>41</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>15619304</td>
+                <td>Onio</td>
+                <td>502</td>
+                <td>France</td>
+                <td>Female</td>
+                <td>42</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>15701354</td>
+                <td>Boni</td>
+                <td>699</td>
+                <td>France</td>
+                <td>Female</td>
+                <td>39</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>15737888</td>
+                <td>Mitchell</td>
+                <td>850</td>
+                <td>Spain</td>
+                <td>Female</td>
+                <td>43</td>
+                <td>2</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
         <p>El trabajo comenzó con un análisis exploratorio de datos (EDA) para entender las variables más influyentes en la fuga de clientes y detectar desequilibrios en las clases (20% de clientes que abandonan frente al 80% que permanecen). Posteriormente, aplicamos técnicas de ingeniería de características como la categorización de edades, codificación de variables categóricas y reducción de dimensionalidad mediante PCA, lo que mejoró la interpretabilidad de los modelos.</p>
         <div class="imagSep">
-          <img src="pics/foto1proj1.png" alt="plot1">
-          <img src="pics/pieplot1.png" alt="pieplot1">
+          <figure>
+            <img src="pics/foto1proj1.png" alt="Distribución de churn por variables">
+            <figcaption>Distribución y relaciones destacadas en el dataset de churn.</figcaption>
+          </figure>
+          <figure>
+            <img src="pics/pieplot1.png" alt="Balance de clases (churn vs no churn)">
+            <figcaption>Balance de clases: proporción de clientes que abandonan.</figcaption>
+          </figure>
         </div>
         <p>Para la fase de predicción, entrenamos y comparamos distintos algoritmos de machine learning —incluyendo Regresión Logística, Random Forest, SVM y Naive Bayes— utilizando validación cruzada y métricas como precisión, recall, F1-score y ROC-AUC, con especial atención al desbalanceo de clases. El objetivo fue optimizar el modelo para identificar con la mayor precisión posible a los clientes que probablemente abandonarían el banco, aportando así información valiosa para diseñar estrategias de retención.</p>
         <div class="imagSep">
-          <img src="pics/naiveBayes.png" alt="NaiveBayesResults">
-          <img src="pics/randomForest.png" alt="RandomForestResults">
+          <figure>
+            <img src="pics/naiveBayes.png" alt="Resultados Naive Bayes">
+            <figcaption>Métricas del modelo Naive Bayes.</figcaption>
+          </figure>
+          <figure>
+            <img src="pics/randomForest.png" alt="Resultados Random Forest">
+            <figcaption>Métricas del modelo Random Forest.</figcaption>
+          </figure>
         </div>
         <p>Además, se incorporó un apartado de interpretabilidad de modelos, con el fin de entender qué características tenían mayor peso en la predicción (como la actividad del cliente, el número de productos contratados o el historial de reclamaciones).
         En conclusión, este proyecto combinó análisis de datos, técnicas de preprocesamiento y distintos enfoques de clasificación para construir un sistema predictivo aplicable en el sector bancario, cuyo fin último es ayudar a reducir la pérdida de clientes y mejorar la toma de decisiones estratégicas.</p>
@@ -87,8 +168,95 @@
         <p>
           La evaluación del sistema se llevará a cabo mediante métricas estándar como precisión, exhaustividad y F1-score, tanto en la detección de eventos como en la extracción de entidades. También se revisará manualmente la calidad de los títulos generados para asegurar su utilidad práctica. Con este enfoque limitado pero concreto, el proyecto busca construir un prototipo factible y evaluable dentro del semestre, que demuestre la aplicabilidad del PLN en la extracción de información financiera estructurada.
         </p>
-        <img src="pics/output3.png" alt="Dashboard de métricas">
+        <img class="img-narrow" src="pics/output3.png" alt="Dashboard de métricas">
       </section>
+
+      <section id="pyspark" class="section">
+        <h3>PySpark Tips Prediction (NYC Yellow Taxi)</h3>
+        <p>
+          Este proyecto se basa en el análisis del famoso dataset de viajes en taxi amarillo de Nueva York, una de las bases de datos de movilidad urbana más utilizadas en ciencia de datos. Contiene millones de registros reales con información sobre cada trayecto: hora y lugar de recogida, destino, distancia recorrida, forma de pago, importe total de la carrera y la propina que deja el pasajero.
+        </p>
+        <p>
+          El reto principal consiste en predecir el valor de la propina (<code>tip_amount</code>) a partir de estas variables, aplicando modelos de Machine Learning de regresión. Para ello, se han implementado diferentes enfoques —desde Regresión Lineal hasta técnicas más avanzadas como Árboles de Decisión, Random Forest y Gradient Boosting— con el objetivo de comparar su rendimiento en términos de precisión y robustez.
+        </p>
+        <p>
+          El sistema se evalúa con métricas como el Error Cuadrático Medio (RMSE), el Error Absoluto Medio (MAE) y el Coeficiente de Determinación (R²), lo que permite identificar qué algoritmos ofrecen las predicciones más fiables.
+        </p>
+        <p>Más allá del aspecto técnico, este proyecto tiene aplicaciones prácticas muy claras:</p>
+        <ul>
+          <li>Conductores que desean anticipar sus ingresos con mayor precisión.</li>
+          <li>Pasajeros interesados en conocer de antemano el coste total de su viaje.</li>
+          <li>Empresas de movilidad y transporte que buscan optimizar su servicio mediante el análisis predictivo de datos.</li>
+        </ul>
+        <p>
+          En definitiva, se trata de un caso de uso real que combina la potencia del análisis de datos a gran escala con técnicas modernas de aprendizaje automático, demostrando cómo la inteligencia artificial puede aportar valor tanto a profesionales como a usuarios finales.
+        </p>
+      </section>
+
+      <section id="ccpp" class="section">
+        <h3>C/C++ • Reflejos</h3>
+        <p>
+          Reflejos es una aplicación desarrollada para medir tiempos de reacción frente a distintos estímulos, con el objetivo de capturar y analizar la rapidez de respuesta humana de manera precisa. El proyecto se diseñó con una arquitectura modular que integra interfaz gráfica, controlador, conexión con hardware y almacenamiento de datos, lo que lo convierte en un sistema flexible, escalable y fácil de mantener.
+        </p>
+        <p>La aplicación se organiza en varias capas:</p>
+        <ul>
+          <li><strong>Interfaz gráfica (GUI)</strong>: permite la interacción directa del usuario y la visualización de resultados.</li>
+          <li><strong>Controlador (Controller)</strong>: gestiona la lógica principal y la comunicación entre módulos.</li>
+          <li><strong>Módulo Micro</strong>: preparado para integrarse con microcontroladores o sensores externos.</li>
+          <li><strong>Base de datos (DB)</strong>: almacena los tiempos de reacción y permite conservar historiales.</li>
+        </ul>
+        <p>
+          Gracias a este diseño, el proyecto puede adaptarse a distintos contextos y ampliar sus funcionalidades, como integrar sensores biométricos, variar los tipos de estímulos o incluir nuevos análisis estadísticos.
+        </p>
+        <p>
+          Las aplicaciones potenciales son diversas: educación, como herramienta de evaluación cognitiva; deporte, en entrenamientos que requieren rapidez de reflejos; psicología y salud, para estudios de atención y procesamiento; e investigación científica, como soporte en experimentos que demandan medición precisa de respuestas.
+        </p>
+        <p>
+          Desde un punto de vista técnico, el proyecto demuestra experiencia en programación orientada a objetos, diseño de interfaces y arquitectura modular en Python, así como la capacidad de conectar software con hardware en tiempo real.
+        </p>
+        <p>
+          En conjunto, Reflejos es una demostración práctica de cómo una idea sencilla puede convertirse en una herramienta útil y versátil, uniendo análisis de datos, experiencia de usuario y posibilidades de integración con dispositivos físicos.
+        </p>
+      </section>
+        </section>
+        <aside class="sidebar" aria-labelledby="side-sections-title">
+          <div class="side-card">
+            <h3 id="side-sections-title">Skills y Secciones</h3>
+            <div class="accordion">
+              <details>
+                <summary><img src="pics/skills/python.png" alt="Python"><span>Python: Machine Learning</span></summary>
+                <ul>
+                  <li><a href="#bankChurn">Bank Churn</a></li>
+                </ul>
+              </details>
+              <details>
+                <summary><img src="pics/skills/python.png" alt="Python"><span>Python: Deep Learning</span></summary>
+                <ul>
+                  <li><a href="#anomaly">Anomaly Detection</a></li>
+                  <li><a href="#fintracker">FinTracker</a></li>
+                </ul>
+              </details>
+              <details>
+                <summary><img src="pics/skills/python.png" alt="PySpark"><span>PySpark: MLlib</span></summary>
+                <ul>
+                  <li><a href="#pyspark">PySpark Tips Prediction</a></li>
+                </ul>
+              </details>
+              <details>
+                <summary><img src="pics/skills/cpp.png" alt="C/C++"><span>C/C++</span></summary>
+                <ul>
+                  <li><a href="#ccpp">C/C++ Reflejos</a></li>
+                </ul>
+              </details>
+            </div>
+          </div>
+          <div class="side-card">
+            <h4>Contacto rápido</h4>
+            <p>¿Colaboramos?</p>
+            <a class="btn" href="contacto.html">Contáctame</a>
+          </div>
+        </aside>
+      </div>
     </div>
   </main>
   <footer>

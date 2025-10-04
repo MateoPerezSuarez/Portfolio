@@ -8,8 +8,8 @@
 </head>
 <body>
   <header>
-    <img src="pics/logonegro.png" alt="logo">
-    <nav>
+    <img src="pics/logo.png" alt="logo">
+    <nav aria-label="Primary">
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="sobremi.html">About me</a></li>
@@ -20,7 +20,75 @@
   </header>
   <main>
     <div class="container">
-      <section class="personalBloque">
+      <div class="layout-with-aside">
+        <section class="content">
+      <div class="grid nav-grid">
+        <a class="proyectosClicables" href="#primeros">
+          <img src="pics/piscinaCOl.jpg" alt="Primeros años">
+          <h3>Primeros años</h3>
+          <p>Infancia y formación inicial</p>
+        </a>
+        <a class="proyectosClicables" href="#universidad">
+          <img src="pics/Deusto_Interior_firmada.jpg" alt="Universidad">
+          <h3>Universidad</h3>
+          <p>Grado y experiencias académicas</p>
+        </a>
+        <a class="proyectosClicables" href="#futuro">
+          <img src="pics/future.png" alt="Futuro">
+          <h3>Futuro</h3>
+          <p>Objetivos y próximos pasos</p>
+        </a>
+      </div>
+
+      
+      <section id="technical-skills" class="section personalBloque highlight-section">
+        <h2>Technical Skills</h2>
+        <div class="skills-block">
+          <p class="skills-subtitle"><strong>Lenguajes de programación</strong></p>
+          <ul class="chips">
+            <li class="chip">Python</li>
+            <li class="chip">R</li>
+            <li class="chip">SQL</li>
+            <li class="chip">Java</li>
+            <li class="chip">PySpark</li>
+          </ul>
+          <p class="skills-subtitle"><strong>Skills Concretas</strong></p>
+          <ul class="chips">
+            <li class="chip">Scikit-learn</li>
+            <li class="chip">TensorFlow</li>
+            <li class="chip">Deep Learning: PyTorch</li>
+            <li class="chip">Machine Learning: Pandas, Pyspark.mllib</li>
+            <li class="chip">Matplotlib</li>
+            <li class="chip">Diseño de Software</li>
+            <li class="chip">Gestión de Bases de Datos</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="social-skills" class="section personalBloque highlight-section">
+        <h2>Social Skills</h2>
+        <ul class="chips">
+          <li class="chip">Trabajo en equipo</li>
+          <li class="chip">Comunicación efectiva</li>
+          <li class="chip">Resolución de problemas</li>
+          <li class="chip">Gestión del tiempo</li>
+          <li class="chip">Organización</li>
+          <li class="chip">Adaptabilidad</li>
+          <li class="chip">Aprendizaje continuo</li>
+          <li class="chip">Liderazgo</li>
+        </ul>
+      </section>
+ 
+      <section id="idiomas" class="section personalBloque highlight-section" aria-labelledby="idiomas-title">
+        <h2 id="idiomas-title">Idiomas</h2>
+        <ul class="chips">
+          <li class="chip">Inglés <span class="badge">C1</span></li>
+          <li class="chip">Euskera <span class="badge">B2</span></li>
+          <li class="chip">Francés <span class="badge">B1</span></li>
+        </ul>
+      </section>
+
+      <section id="primeros" class="personalBloque section">
         <h2>Primeros años</h2>
         <img src="pics/piscinaCOl.jpg" alt="Colegio Vizcaya">
         <p>
@@ -28,7 +96,7 @@
         </p>
       </section>
 
-      <section class="section personalBloque">
+      <section id="universidad" class="section personalBloque">
         <h2>Universidad</h2>
         <img src="pics/Deusto_Interior_firmada.jpg" alt="universidad">
         <p>
@@ -44,6 +112,47 @@
         Mi objetivo a futuro es seguir especializándome en la aplicación de la Ciencia de Datos a problemas del mundo real, explorando campos como la predicción financiera, la detección de anomalías o el desarrollo de sistemas inteligentes que apoyen la toma de decisiones estratégicas. Considero que esta etapa universitaria no solo me está aportando conocimientos técnicos, sino también una mentalidad analítica, crítica y creativa que me ayudará a crecer como profesional en el ámbito tecnológico.
         </p>
       </section>
+
+      <section id="futuro" class="section personalBloque">
+        <h2>Futuro</h2>
+        <div class="videoResponsive">
+          <iframe src="https://www.youtube.com/embed/A5_6fY9JNc4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <p>
+          Mi objetivo profesional es aplicar mis conocimientos en Ciencia de Datos e Ingeniería Informática al sector de las <strong>finanzas</strong>, un ámbito que me resulta especialmente atractivo por el enorme volumen de información que genera y las múltiples oportunidades que ofrece para la innovación. El análisis de datos en este campo permite optimizar inversiones, detectar anomalías en los mercados y mejorar la toma de decisiones estratégicas, lo que lo convierte en un entorno dinámico y con gran proyección.
+        </p>
+        <p>
+          Al mismo tiempo, me mantengo abierto a explorar otros sectores como la energía y la investigación aplicada, donde la ciencia de datos juega un papel fundamental en la optimización de recursos, la sostenibilidad y la innovación tecnológica. Considero que una de las principales ventajas de esta disciplina es su versatilidad, ya que permite aportar valor en ámbitos muy diversos, desde la predicción de tendencias hasta la generación de soluciones más eficientes y sostenibles.
+        </p>
+        <p>
+          En definitiva, mi propósito es crecer como profesional en el análisis de datos, trabajando en proyectos que no solo tengan un impacto en la eficiencia y la innovación, sino que también contribuyan al desarrollo de sectores clave para la sociedad y el futuro.
+        </p>
+      </section>
+        </section>
+        <aside class="sidebar" aria-labelledby="side-sections-title">
+          <div class="side-card">
+            <h3 id="side-sections-title">Navegación</h3>
+            <div class="accordion">
+              <details open>
+                <summary><span>Skills</span></summary>
+                <ul>
+                  <li><a href="#technical-skills">Technical Skills</a></li>
+                  <li><a href="#social-skills">Social Skills</a></li>
+                  <li><a href="#idiomas">Idiomas</a></li>
+                </ul>
+              </details>
+              <details>
+                <summary><span>Trayectoria</span></summary>
+                <ul>
+                  <li><a href="#primeros">Primeros años</a></li>
+                  <li><a href="#universidad">Universidad</a></li>
+                  <li><a href="#futuro">Futuro</a></li>
+                </ul>
+              </details>
+            </div>
+          </div>
+        </aside>
+      </div>
     </div>
   </main>
   <footer>
