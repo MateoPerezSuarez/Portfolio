@@ -497,5 +497,101 @@ header ~ * {
 }
 */
 
+/* ==============================
+   Reescalado móvil-first (según PDF)
+   ============================== */
+
+/* 1) Imágenes/medios adaptables (recomendado en el PDF) */
+img, object, embed, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 2) Estilos base (mobile-first): hacen que TODO se vea bien en móviles */
+header {
+  grid-template-columns: 1fr; /* apila logo + nav en móvil */
+  padding: 0.6rem 0.8rem;
+}
+header img { width: 110px; } /* más pequeño en móvil */
+nav { justify-self: stretch; margin-top: 0.5rem; }
+nav ul { flex-direction: column; gap: 0.35rem; align-items: stretch; }
+nav a { display: block; text-align: center; padding: 0.5rem; }
+
+/* Container: usar padding relativo para escalado */
+.container {
+  padding: 1rem clamp(1rem, 4vw, 2rem);
+}
+
+/* Aside / layout principal: en móvil será columna (ya en línea con Mobile First) */
+.asideMostrar {
+  grid-template-columns: 1fr; /* 1 columna en móviles */
+  gap: 1rem;
+}
+
+/* Sidebar: quitar sticky en pantallas muy pequeñas para evitar problemas */
+.sidebar {
+  position: static;
+  top: auto;
+  max-height: none;
+}
+
+/* Centrados y tamaños de textos adaptables */
+h1 { font-size: clamp(1.4rem, 4.5vw, 2rem); }
+h2 { font-size: clamp(1.15rem, 4vw, 1.5rem); }
+p  { font-size: clamp(0.95rem, 2.6vw, 1rem); }
+
+/* Formularios: inputs más grandes y espaciado en móvil */
+.container form { padding: 0.25rem; }
+input, select, textarea, button { font-size: 1rem; }
+
+/* Footer: ya tienes un @media a 700px; reforzamos comportamiento móvil */
+.footerCont {
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+/* ==============================
+   Breakpoints (según ejemplos del PDF)
+   - tablet: min-width 401px and max-width 960px
+   - desktop: min-width 961px
+   ============================== */
+
+/* Tablet (ej. iPad vertical/horizontal intermedios) */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  header {
+    grid-template-columns: auto 1fr; /* logo + nav en una fila */
+    align-items: center;
+  }
+  header img { width: 130px; }
+  nav ul { flex-direction: row; justify-content: flex-end; gap: 0.6rem; }
+  .asideMostrar {
+    grid-template-columns: 1fr 260px; /* mostrar aside al lado, pero estrecho */
+    gap: 1rem;
+  }
+  .sidebar { position: sticky; top: 120px; max-height: calc(100vh - 140px); overflow: auto; }
+  .landingH { padding: 8vh 2rem 2rem 2rem; }
+  .landingLogo { width: min(70vw, 480px); }
+}
+
+/* Desktop (pantallas grandes) */
+@media only screen and (min-width: 961px) {
+  header {
+    grid-template-columns: auto 1fr;
+    padding: 0.75rem 1rem;
+  }
+  header img { width: 140px; }
+  nav ul { flex-direction: row; gap: 0.75rem 1rem; }
+  .asideMostrar {
+    grid-template-columns: 1fr 320px; /* aside más ancho en pantallas grandes */
+    gap: 1.25rem;
+  }
+  .sidebar { position: sticky; top: 140px; max-height: calc(100vh - 160px); overflow: auto; }
+  .container { max-width: 1200px; } /* aprovechar más espacio en desktop */
+  .landingLogo { width: min(60vw, 520px); }
+}
+
+
 
 
