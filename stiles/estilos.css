@@ -476,100 +476,73 @@ fieldset input{
 figure { margin: 0; text-align: center; }
 figcaption { margin-top: 0.35rem; font-size: 0.9rem; color: #bfcdf7; }
 
-/* Prueba de reescalado (hay que mejorar) */
 
-/* Prueba de animaciones con CSS 
-@keyframes fade-in-reverse {
-  from { opacity: 1; transform: translateY(0); }
-  to { opacity: 0; transform: translateY(6px); }
-}
 
-.fade-in-reverse {
-  animation: fade-in-reverse 0.5s linear 0s reverse none;
-}
-header ~ * {
-  animation: fade-in-reverse 0.5s linear 0s reverse none;
-}
 
-@media (prefers-reduced-motion: reduce) {
-  .fade-in-reverse,
-  header ~ * {
-    animation: none !important;
-  }
-}
-*/
+/*///////////////////////////////////
+Prueba para implementar el movil-first
+///////////////////////////////////// */
 
-/* ==============================
-   Reescalado móvil-first (según PDF)
-   ============================== */
-
-/* 1) Imágenes/medios adaptables (recomendado en el PDF) */
 img, object, embed, video {
+  width: 100%;
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* 2) Estilos base (mobile-first): hacen que TODO se vea bien en móviles */
+/* Estilos base */
 header {
-  grid-template-columns: 1fr; /* apila logo + nav en móvil */
+  grid-template-columns: 1fr;
   padding: 0.6rem 0.8rem;
 }
-header img { width: 110px; } /* más pequeño en móvil */
+header img { width: 110px; }
 nav { justify-self: stretch; margin-top: 0.5rem; }
 nav ul { flex-direction: column; gap: 0.35rem; align-items: stretch; }
 nav a { display: block; text-align: center; padding: 0.5rem; }
 
-/* Container: usar padding relativo para escalado */
+/* Cambar el padding para que se reescale */
 .container {
   padding: 1rem clamp(1rem, 4vw, 2rem);
 }
 
 /* Aside / layout principal: en móvil será columna (ya en línea con Mobile First) */
 .asideMostrar {
-  grid-template-columns: 1fr; /* 1 columna en móviles */
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
-/* Sidebar: quitar sticky en pantallas muy pequeñas para evitar problemas */
+/*  Quitar sticky para ver si se reescala*/
 .sidebar {
   position: static;
   top: auto;
   max-height: none;
 }
 
-/* Centrados y tamaños de textos adaptables */
+/* Centrar y tamaños */
 h1 { font-size: clamp(1.4rem, 4.5vw, 2rem); }
 h2 { font-size: clamp(1.15rem, 4vw, 1.5rem); }
 p  { font-size: clamp(0.95rem, 2.6vw, 1rem); }
 
-/* Formularios: inputs más grandes y espaciado en móvil */
+/* Formularios para movil */
 .container form { padding: 0.25rem; }
 input, select, textarea, button { font-size: 1rem; }
 
-/* Footer: ya tienes un @media a 700px; reforzamos comportamiento móvil */
 .footerCont {
   flex-direction: column;
   gap: 0.75rem;
   text-align: center;
 }
 
-/* ==============================
-   Breakpoints (según ejemplos del PDF)
-   - tablet: min-width 401px and max-width 960px
-   - desktop: min-width 961px
-   ============================== */
-
-/* Tablet (ej. iPad vertical/horizontal intermedios) */
+/* Tablet) */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
   header {
-    grid-template-columns: auto 1fr; /* logo + nav en una fila */
+    grid-template-columns: auto 1fr;
     align-items: center;
   }
   header img { width: 130px; }
   nav ul { flex-direction: row; justify-content: flex-end; gap: 0.6rem; }
   .asideMostrar {
-    grid-template-columns: 1fr 260px; /* mostrar aside al lado, pero estrecho */
+    grid-template-columns: 1fr 260px;
     gap: 1rem;
   }
   .sidebar { position: sticky; top: 120px; max-height: calc(100vh - 140px); overflow: auto; }
@@ -577,7 +550,7 @@ input, select, textarea, button { font-size: 1rem; }
   .landingLogo { width: min(70vw, 480px); }
 }
 
-/* Desktop (pantallas grandes) */
+/* Prueba de reescalado con desktop */
 @media only screen and (min-width: 961px) {
   header {
     grid-template-columns: auto 1fr;
@@ -586,15 +559,13 @@ input, select, textarea, button { font-size: 1rem; }
   header img { width: 140px; }
   nav ul { flex-direction: row; gap: 0.75rem 1rem; }
   .asideMostrar {
-    grid-template-columns: 1fr 320px; /* aside más ancho en pantallas grandes */
+    grid-template-columns: 1fr 320px;
     gap: 1.25rem;
   }
   .sidebar { position: sticky; top: 140px; max-height: calc(100vh - 160px); overflow: auto; }
-  .container { max-width: 1200px; } /* aprovechar más espacio en desktop */
+  .container { max-width: 1200px; }
   .landingLogo { width: min(60vw, 520px); }
 }
-
-
 
 section .content h1 { font-size: 1.5rem; line-height: 1.2; }
 section .content h2 { font-size: 1.25rem; line-height: 1.25; }
@@ -619,16 +590,26 @@ section .content li { font-size: 1rem; line-height: 1.7; }
   section .content li { font-size: 1.12rem; }
 }
 
-
+/*Prueba para intentar arreglar ventana work*/
 @media only screen and (max-width: 400px) {
-  .dataTable { font-size: 0.9rem; } /* un pelín más compacta en móvil estrecho */
+  .dataTable { font-size: 0.9rem; }
 }
 @media only screen and (min-width: 961px) {
   .dataTable { font-size: 1rem; }
 }
-
-/* Las miniaturas lado a lado (imagSep) ya tienen max-width y flex-wrap:
-   si quieres que respiren un poco en tablet, puedes aumentar min-width */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
   .imagSep img { min-width: 220px; }
+}
+
+
+/*El aside sale arriba en los moviles*/
+@media only screen and (max-width: 400px) {
+  .asideMostrar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .asideMostrar aside {
+    order: -1;
+  }
 }
