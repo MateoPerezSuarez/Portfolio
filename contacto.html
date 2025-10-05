@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio • Contacto</title>
   <link rel="stylesheet" href="stiles/estilos.css">
+  <link rel="icon" href="pics/mifoto.jpg" type="image/png">
 </head>
 <body>
   <header>
-    <img src="pics/logo.png" alt="logo">
+    <img src="pics/logos/logo.png" alt="logo">
     <nav aria-label="Primary">
       <ul>
         <li><a href="index.html">Inicio</a></li>
@@ -20,7 +21,7 @@
   </header>
   <main>
     <div class="container">
-      <h2>Contacto</h2>
+      <h1>Contacto</h1>
       <form action="#" method="post">
         <fieldset>
           <legend>Datos de contacto</legend>
@@ -50,27 +51,87 @@
           <label for="mensaje">Mensaje</label>
           <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame brevemente tu caso..."></textarea>
         </fieldset>
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </div>
+    <div class="container">
+      <h1>Reservar Cita</h1>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Datos personales</legend>
+          <label for="nombre-cita">Nombre completo</label>
+          <input type="text" id="nombre-cita" name="nombre-cita" required>
+
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" required>
+
+          <label for="email-cita">Correo</label>
+          <input type="email" id="email-cita" name="email-cita" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Detalles de la cita</legend>
+          <label for="tipo-cita">Tipo de cita</label>
+          <select id="tipo-cita" name="tipo-cita" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <optgroup label="Consultas">
+              <option value="consultoria">Consultoría</option>
+              <option value="entrevista">Entrevista inicial</option>
+            </optgroup>
+            <optgroup label="Reuniones">
+              <option value="reunion-proyecto">Reunión de proyecto</option>
+              <option value="seguimiento">Seguimiento</option>
+            </optgroup>
+            <option value="otros">Otros</option>
+          </select>
+
+          <label for="fecha">Fecha preferida</label>
+          <input type="date" id="fecha" name="fecha" required>
+
+          <label for="hora">Hora preferida</label>
+          <input type="time" id="hora" name="hora" required>
+
+          <label for="notas">Notas adicionales</label>
+          <textarea id="notas" name="notas" rows="4" placeholder="Cuéntame qué necesitas discutir..."></textarea>
+        </fieldset>
 
         <fieldset>
           <legend>Tratamiento de Datos</legend>
           <div>
-            <input type="checkbox" id="consent" name="consent" required>
-            <label for="consent">Acepto el tratamiento de mis datos para contactar conmigo</label>
+            <label for="consent-cita">Acepto el tratamiento de mis datos para gestionar la cita</label>
+            <input type="checkbox" id="consent-cita" name="consent-cita" required>
           </div>
-        <details>
-          <summary>Política de privacidad</summary>
-          <p>Usaré tu información exclusivamente para responder a tu consulta. No se compartirá con terceros. Puedes solicitar la eliminación en cualquier momento.</p>
-        </details>
+          <details>
+            <summary>Política de privacidad</summary>
+            <p>Usaré tu información exclusivamente para gestionar tu cita. No se compartirá con terceros. Puedes solicitar la eliminación en cualquier momento.</p>
+          </details>
         </fieldset>
 
-        <button type="submit">Enviar</button>
+        <button type="submit">Reservar Cita</button>
       </form>
     </div>
-  </main>
-  <footer>
-    <p>&copy; 2025 Mateo Pérez | Contacto: mateo.perez.suarez@opendeusto.es , +34 654168995</p>
-    <p><a href="https://github.com/MateoPerezSuarez">GitHub</a> |
-         <a href="https://www.linkedin.com/in/mateo-p%C3%A9rez-suarez-8a9264246/">LinkedIn</a></p>
+  </main><footer class="footerF">
+    <div class="footerCont">
+      <div class="footerInf">
+        <p>&copy; 2025 <strong>Mateo Pérez</strong></p>
+        <p>Correo Electrónico:  <a href="mailto:mateo.perez.suarez@opendeusto.es">mateo.perez.suarez@opendeusto.es</a></p>
+        <p>Teléfono: +34 654 168 995</p>
+      </div>
+      <div class="footerRedes">
+        <a href="https://github.com/MateoPerezSuarez" target="_blank" aria-label="GitHub">
+          <img src="pics/footer/git.png" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/mateo-p%C3%A9rez-suarez-8a9264246/" target="_blank" aria-label="LinkedIn">
+          <img src="pics/footer/linkdin.png" alt="LinkedIn">
+        </a>
+        <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+          <img src="pics/footer/x.webp" alt="Twitter">
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+          <img src="pics/footer/ig.png" alt="Instagram">
+        </a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

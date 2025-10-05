@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio • About me</title>
   <link rel="stylesheet" href="stiles/estilos.css">
+  <link rel="icon" href="pics/mifoto.jpg" type="image/png">
 </head>
 <body>
   <header>
-    <img src="pics/logo.png" alt="logo">
+    <img src="pics/logos/logo.png" alt="logo">
     <nav aria-label="Primary">
       <ul>
         <li><a href="index.html">Inicio</a></li>
@@ -20,128 +21,111 @@
   </header>
   <main>
     <div class="container">
-      <div class="layout-with-aside">
+      <h1>About Me</h1>
+      <div class="asideMostrar">
         <section class="content">
-      <div class="grid nav-grid">
-        <a class="proyectosClicables" href="#primeros">
-          <img src="pics/piscinaCOl.jpg" alt="Primeros años">
-          <h3>Primeros años</h3>
-          <p>Infancia y formación inicial</p>
-        </a>
-        <a class="proyectosClicables" href="#universidad">
-          <img src="pics/Deusto_Interior_firmada.jpg" alt="Universidad">
-          <h3>Universidad</h3>
-          <p>Grado y experiencias académicas</p>
-        </a>
-        <a class="proyectosClicables" href="#futuro">
-          <img src="pics/future.png" alt="Futuro">
-          <h3>Futuro</h3>
-          <p>Objetivos y próximos pasos</p>
-        </a>
-      </div>
+          <section id="highlight" class="section">
+            <section id="techHab" class="section personalBloque conRelieve">
+              <h2>Technical Skills</h2>
+              <div class="bloqueHabs">
+                <p class="skillSubtitulo"><strong>Lenguajes de programación</strong></p>
+                <ul class="chips">
+                  <li class="chip">Python</li>
+                  <li class="chip">R</li>
+                  <li class="chip">SQL</li>
+                  <li class="chip">Java</li>
+                  <li class="chip">PySpark</li>
+                </ul>
+                <p class="skillSubtitulo"><strong>Skills Concretas</strong></p>
+                <ul class="chips">
+                  <li class="chip">Scikit-learn</li>
+                  <li class="chip">TensorFlow</li>
+                  <li class="chip">Deep Learning: PyTorch</li>
+                  <li class="chip">Machine Learning: Pandas, Pyspark.mllib</li>
+                  <li class="chip">Matplotlib</li>
+                  <li class="chip">Diseño de Software</li>
+                  <li class="chip">Gestión de Bases de Datos</li>
+                </ul>
+              </div>
+            </section>
 
-      
-      <section id="technical-skills" class="section personalBloque highlight-section">
-        <h2>Technical Skills</h2>
-        <div class="skills-block">
-          <p class="skills-subtitle"><strong>Lenguajes de programación</strong></p>
-          <ul class="chips">
-            <li class="chip">Python</li>
-            <li class="chip">R</li>
-            <li class="chip">SQL</li>
-            <li class="chip">Java</li>
-            <li class="chip">PySpark</li>
-          </ul>
-          <p class="skills-subtitle"><strong>Skills Concretas</strong></p>
-          <ul class="chips">
-            <li class="chip">Scikit-learn</li>
-            <li class="chip">TensorFlow</li>
-            <li class="chip">Deep Learning: PyTorch</li>
-            <li class="chip">Machine Learning: Pandas, Pyspark.mllib</li>
-            <li class="chip">Matplotlib</li>
-            <li class="chip">Diseño de Software</li>
-            <li class="chip">Gestión de Bases de Datos</li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="social-skills" class="section personalBloque highlight-section">
-        <h2>Social Skills</h2>
-        <ul class="chips">
-          <li class="chip">Trabajo en equipo</li>
-          <li class="chip">Comunicación efectiva</li>
-          <li class="chip">Resolución de problemas</li>
-          <li class="chip">Gestión del tiempo</li>
-          <li class="chip">Organización</li>
-          <li class="chip">Adaptabilidad</li>
-          <li class="chip">Aprendizaje continuo</li>
-          <li class="chip">Liderazgo</li>
-        </ul>
-      </section>
- 
-      <section id="idiomas" class="section personalBloque highlight-section" aria-labelledby="idiomas-title">
-        <h2 id="idiomas-title">Idiomas</h2>
-        <ul class="chips">
-          <li class="chip">Inglés <span class="badge">C1</span></li>
-          <li class="chip">Euskera <span class="badge">B2</span></li>
-          <li class="chip">Francés <span class="badge">B1</span></li>
-        </ul>
-      </section>
-
-      <section id="primeros" class="personalBloque section">
-        <h2>Primeros años</h2>
-        <img src="pics/piscinaCOl.jpg" alt="Colegio Vizcaya">
-        <p>
-          Comencé mi educación en el <a href="https://colegiovizcaya.net/">Colegio Vizcaya</a>, donde adquirí una base académica sólida y, sobre todo, valores fundamentales como el respeto, la responsabilidad y la perseverancia. Durante estos años también reforcé mis habilidades sociales, aprendí a trabajar en equipo y a afrontar los retos con disciplina y constancia. Fue en esta etapa cuando descubrí la importancia de la curiosidad intelectual y el aprendizaje continuo, cualidades que hoy sigo cultivando en mi desarrollo personal y profesional.
-        </p>
-      </section>
-
-      <section id="universidad" class="section personalBloque">
-        <h2>Universidad</h2>
-        <img src="pics/Deusto_Interior_firmada.jpg" alt="universidad">
-        <p>
-          Actualmente curso <strong>Ciencia de Datos e Ingeniería Informática</strong> en la <a href="https://www.deusto.es/es/inicio">Universidad de Deusto</a>, una formación que me permite integrar conocimientos de programación, matemáticas, estadística y gestión de datos con la construcción de soluciones tecnológicas de impacto. Gracias a esta doble especialización he podido trabajar tanto con la parte teórica, modelos matemáticos, algoritmos y estructuras de datos, como con la parte práctica, desarrollo de aplicaciones, optimización de procesos y análisis de grandes volúmenes de información.
-        </p>
-        <p>
-        Durante la carrera he aprendido a utilizar lenguajes de programación como <strong>Python, R, SQL y Java</strong>, además de librerías y frameworks especializados en machine learning, deep learning y análisis de datos (Scikit-learn, TensorFlow, PyTorch, Pandas, entre otros). También he trabajado con bases de datos relacionales y no relacionales, y con herramientas de visualización como Power BI o Matplotlib, lo que me permite comunicar resultados de forma clara y efectiva.
-        </p>
-        <p>
-        Más allá de lo técnico, mediante las distintas asignaturas la universidad me ha brindado la oportunidad de participar en <a href="proyectos.html">proyectos colaborativos</a> que fomentan el trabajo en equipo, la comunicación y la gestión de proyectos. En ellos he aprendido a enfrentar desafíos reales, desde la recopilación y limpieza de datos hasta la implementación de modelos predictivos y la presentación de resultados a un público no especializado.
-        </p>
-        <p>
-        Mi objetivo a futuro es seguir especializándome en la aplicación de la Ciencia de Datos a problemas del mundo real, explorando campos como la predicción financiera, la detección de anomalías o el desarrollo de sistemas inteligentes que apoyen la toma de decisiones estratégicas. Considero que esta etapa universitaria no solo me está aportando conocimientos técnicos, sino también una mentalidad analítica, crítica y creativa que me ayudará a crecer como profesional en el ámbito tecnológico.
-        </p>
-      </section>
-
-      <section id="futuro" class="section personalBloque">
-        <h2>Futuro</h2>
-        <div class="videoResponsive">
-          <iframe src="https://www.youtube.com/embed/A5_6fY9JNc4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        <p>
-          Mi objetivo profesional es aplicar mis conocimientos en Ciencia de Datos e Ingeniería Informática al sector de las <strong>finanzas</strong>, un ámbito que me resulta especialmente atractivo por el enorme volumen de información que genera y las múltiples oportunidades que ofrece para la innovación. El análisis de datos en este campo permite optimizar inversiones, detectar anomalías en los mercados y mejorar la toma de decisiones estratégicas, lo que lo convierte en un entorno dinámico y con gran proyección.
-        </p>
-        <p>
-          Al mismo tiempo, me mantengo abierto a explorar otros sectores como la energía y la investigación aplicada, donde la ciencia de datos juega un papel fundamental en la optimización de recursos, la sostenibilidad y la innovación tecnológica. Considero que una de las principales ventajas de esta disciplina es su versatilidad, ya que permite aportar valor en ámbitos muy diversos, desde la predicción de tendencias hasta la generación de soluciones más eficientes y sostenibles.
-        </p>
-        <p>
-          En definitiva, mi propósito es crecer como profesional en el análisis de datos, trabajando en proyectos que no solo tengan un impacto en la eficiencia y la innovación, sino que también contribuyan al desarrollo de sectores clave para la sociedad y el futuro.
-        </p>
-      </section>
+          <section id="socialHabs" class="section personalBloque conRelieve">
+            <h2>Social Skills</h2>
+            <ul class="chips">
+              <li class="chip">Trabajo en equipo</li>
+              <li class="chip">Comunicación efectiva</li>
+              <li class="chip">Resolución de problemas</li>
+              <li class="chip">Gestión del tiempo</li>
+              <li class="chip">Organización</li>
+              <li class="chip">Adaptabilidad</li>
+              <li class="chip">Aprendizaje continuo</li>
+              <li class="chip">Liderazgo</li>
+            </ul>
+          </section>
+          <section id="idiomas" class="section personalBloque conRelieve" aria-labelledby="idiomas-title">
+            <h2 id="idiomas-title">Idiomas</h2>
+            <ul class="chips">
+              <li class="chip">Inglés <span class="badge">C1</span></li>
+              <li class="chip">Euskera <span class="badge">B2</span></li>
+              <li class="chip">Francés <span class="badge">B1</span></li>
+            </ul>
+          </section>
         </section>
-        <aside class="sidebar" aria-labelledby="side-sections-title">
-          <div class="side-card">
+
+          <section id="primeros" class="personalBloque section">
+            <h2>Primeros años</h2>
+            <img src="pics/sobreMi/piscinaCOl.jpg" alt="Colegio Vizcaya">
+            <p>
+              Comencé mi educación en el <a href="https://colegiovizcaya.net/">Colegio Vizcaya</a>, donde adquirí una base académica sólida y, sobre todo, valores fundamentales como el respeto, la responsabilidad y la perseverancia. Durante estos años también reforcé mis habilidades sociales, aprendí a trabajar en equipo y a afrontar los retos con disciplina y constancia. Fue en esta etapa cuando descubrí la importancia de la curiosidad intelectual y el aprendizaje continuo, cualidades que hoy sigo cultivando en mi desarrollo personal y profesional.
+            </p>
+          </section>
+
+          <section id="universidad" class="section personalBloque">
+            <h2>Universidad</h2>
+            <img src="pics/sobreMi/Deusto_Interior_firmada.jpg" alt="universidad">
+            <p>
+              Actualmente curso <strong>Ciencia de Datos e Ingeniería Informática</strong> en la <a href="https://www.deusto.es/es/inicio">Universidad de Deusto</a>, una formación que me permite integrar conocimientos de programación, matemáticas, estadística y gestión de datos con la construcción de soluciones tecnológicas de impacto. Gracias a esta doble especialización he podido trabajar tanto con la parte teórica, modelos matemáticos, algoritmos y estructuras de datos, como con la parte práctica, desarrollo de aplicaciones, optimización de procesos y análisis de grandes volúmenes de información.
+            </p>
+            <p>
+            Durante la carrera he aprendido a utilizar lenguajes de programación como <strong>Python, R, SQL y Java</strong>, además de librerías y frameworks especializados en machine learning, deep learning y análisis de datos (Scikit-learn, TensorFlow, PyTorch, Pandas, entre otros). También he trabajado con bases de datos relacionales y no relacionales, y con herramientas de visualización como Power BI o Matplotlib, lo que me permite comunicar resultados de forma clara y efectiva.
+            </p>
+            <p>
+            Más allá de lo técnico, mediante las distintas asignaturas la universidad me ha brindado la oportunidad de participar en <a href="proyectos.html">proyectos colaborativos</a> que fomentan el trabajo en equipo, la comunicación y la gestión de proyectos. En ellos he aprendido a enfrentar desafíos reales, desde la recopilación y limpieza de datos hasta la implementación de modelos predictivos y la presentación de resultados a un público no especializado.
+            </p>
+            <p>
+            Mi objetivo a futuro es seguir especializándome en la aplicación de la Ciencia de Datos a problemas del mundo real, explorando campos como la predicción financiera, la detección de anomalías o el desarrollo de sistemas inteligentes que apoyen la toma de decisiones estratégicas. Considero que esta etapa universitaria no solo me está aportando conocimientos técnicos, sino también una mentalidad analítica, crítica y creativa que me ayudará a crecer como profesional en el ámbito tecnológico.
+            </p>
+          </section>
+
+          <section id="futuro" class="section personalBloque">
+            <h2>Futuro</h2>
+            <div class="videoResponsive">
+              <iframe src="https://www.youtube.com/embed/A5_6fY9JNc4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>
+              Mi objetivo profesional es aplicar mis conocimientos en Ciencia de Datos e Ingeniería Informática al sector de las <strong>finanzas</strong>, un ámbito que me resulta especialmente atractivo por el enorme volumen de información que genera y las múltiples oportunidades que ofrece para la innovación. El análisis de datos en este campo permite optimizar inversiones, detectar anomalías en los mercados y mejorar la toma de decisiones estratégicas, lo que lo convierte en un entorno dinámico y con gran proyección.
+            </p>
+            <p>
+              Al mismo tiempo, me mantengo abierto a explorar otros sectores como la energía y la investigación aplicada, donde la ciencia de datos juega un papel fundamental en la optimización de recursos, la sostenibilidad y la innovación tecnológica. Considero que una de las principales ventajas de esta disciplina es su versatilidad, ya que permite aportar valor en ámbitos muy diversos, desde la predicción de tendencias hasta la generación de soluciones más eficientes y sostenibles.
+            </p>
+            <p>
+              En definitiva, mi propósito es crecer como profesional en el análisis de datos, trabajando en proyectos que no solo tengan un impacto en la eficiencia y la innovación, sino que también contribuyan al desarrollo de sectores clave para la sociedad y el futuro.
+            </p>
+          </section>
+        </section>
+        <aside class="sidebar sobreMi" aria-labelledby="side-sections-title">
+          <div class="asideTarjetas">
             <h3 id="side-sections-title">Navegación</h3>
             <div class="accordion">
               <details open>
                 <summary><span>Skills</span></summary>
                 <ul>
-                  <li><a href="#technical-skills">Technical Skills</a></li>
-                  <li><a href="#social-skills">Social Skills</a></li>
+                  <li><a href="#techHab">Technical Skills</a></li>
+                  <li><a href="#socialHabs">Social Skills</a></li>
                   <li><a href="#idiomas">Idiomas</a></li>
                 </ul>
               </details>
-              <details>
+              <details open>
                 <summary><span>Trayectoria</span></summary>
                 <ul>
                   <li><a href="#primeros">Primeros años</a></li>
@@ -151,15 +135,38 @@
               </details>
             </div>
           </div>
+          <div class="asideTarjetas">
+            <h4>Más sobre mi</h4>
+            <p>¿Quieres saber más?</p>
+            <a class="btn" href="contacto.html">Contáctame</a>
+          </div>
         </aside>
       </div>
     </div>
-  </main>
-  <footer>
-    <p>&copy; 2025 Mateo Pérez | Contacto: mateo.perez.suarez@opendeusto.es , +34 654168995</p>
-    <p><a href="https://github.com/MateoPerezSuarez">GitHub</a> |
-         <a href="https://www.linkedin.com/in/mateo-p%C3%A9rez-suarez-8a9264246/">LinkedIn</a></p>
+  </main><footer class="footerF">
+    <div class="footerCont">
+      <div class="footerInf">
+        <p>&copy; 2025 <strong>Mateo Pérez</strong></p>
+        <p>Correo Electrónico:  <a href="mailto:mateo.perez.suarez@opendeusto.es">mateo.perez.suarez@opendeusto.es</a></p>
+        <p>Teléfono: +34 654 168 995</p>
+      </div>
+      <div class="footerRedes">
+        <a href="https://github.com/MateoPerezSuarez" target="_blank" aria-label="GitHub">
+          <img src="pics/footer/git.png" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/mateo-p%C3%A9rez-suarez-8a9264246/" target="_blank" aria-label="LinkedIn">
+          <img src="pics/footer/linkdin.png" alt="LinkedIn">
+        </a>
+        <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+          <img src="pics/footer/x.webp" alt="Twitter">
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+          <img src="pics/footer/ig.png" alt="Instagram">
+        </a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
+
 
