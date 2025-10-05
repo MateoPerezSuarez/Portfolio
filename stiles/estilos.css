@@ -401,6 +401,8 @@ img { max-width: 100%; height: auto; }
 }
 .asideTarjetas h4 { margin: 0 0 0.5rem 0; }
 
+
+
 /* PRUEBA DE PONER PORTADAS DE PROYECTO CLICABLES
 
 .proyectosClicables { border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 12px; background: rgba(255,255,255,0.04); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; }
@@ -527,12 +529,6 @@ p  { font-size: clamp(0.95rem, 2.6vw, 1rem); }
 /* Formularios para movil */
 .container form { padding: 0.25rem; }
 input, select, textarea, button { font-size: 1rem; }
-
-.footerCont {
-  flex-direction: column;
-  gap: 0.75rem;
-  text-align: center;
-}
 
 /* Tablet) */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
